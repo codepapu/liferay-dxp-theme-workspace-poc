@@ -139,3 +139,4 @@ window.MyPortalShadcnTheme.apply('dark');
 
 Liferay modules follow Liferay’s standard licensing. Client extension and custom module code: use your project license as appropriate.
 "# my-workspace" 
+"# liferay-dxp-theme-workspace-poc" 
