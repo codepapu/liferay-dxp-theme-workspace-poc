@@ -1,0 +1,219 @@
+// Liferay product menu → shadcn/ui v4 Sidebar (https://ui.shadcn.com/docs/components/radix/sidebar)
+
+$sidebar-width: 16rem;
+$sidebar-menu-gap: 0.25rem;
+$sidebar-menu-padding-x: 0.5rem;
+$sidebar-menu-button-height: 2rem;
+$sidebar-group-label-size: 0.75rem;
+
+@mixin sidebar-menu-button {
+	align-items: center;
+	background-color: transparent;
+	border: 0;
+	border-radius: calc(var(--radius) - 2px);
+	color: var(--sidebar-foreground);
+	display: flex;
+	font-size: 0.875rem;
+	font-weight: 400;
+	gap: 0.5rem;
+	line-height: 1.25rem;
+	min-height: $sidebar-menu-button-height;
+	padding: 0.5rem;
+	text-decoration: none;
+	transition: background-color 0.15s ease, color 0.15s ease;
+	width: 100%;
+
+	&:hover,
+	&:focus-visible {
+		background-color: var(--sidebar-accent) !important;
+		color: var(--sidebar-accent-foreground) !important;
+		outline: none;
+	}
+}
+
+@mixin sidebar-menu-button-active {
+	background-color: var(--sidebar-accent) !important;
+	color: var(--sidebar-accent-foreground) !important;
+	font-weight: 500;
+}
+
+@mixin sidebar-group-label {
+	color: var(--muted-foreground) !important;
+	font-size: $sidebar-group-label-size;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+	line-height: 1rem;
+	padding: 0.5rem $sidebar-menu-padding-x;
+	text-transform: uppercase;
+}
+
+html .cadmin.lfr-product-menu-panel.sidenav-menu-slider {
+	z-index: 990 !important;
+
+	&.open .sidenav-menu,
+	.sidenav-menu,
+	.product-menu {
+		background-color: var(--sidebar) !important;
+		border-right: 1px solid var(--sidebar-border) !important;
+		box-shadow: none;
+		color: var(--sidebar-foreground) !important;
+		width: $sidebar-width !important;
+	}
+}
+
+html body.product-menu-open #wrapper,
+html body.product-menu-open .cadmin.control-menu-container {
+	@media (min-width: 992px) {
+		padding-left: $sidebar-width !important;
+	}
+}
+
+html .cadmin .product-menu,
+html .cadmin .product-menu .sidenav-menu,
+html .cadmin .lfr-product-menu-panel .product-menu {
+	background-color: var(--sidebar) !important;
+	color: var(--sidebar-foreground) !important;
+	font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+	/* Scrollable sidebar content (SidebarContent) */
+	.sidebar-body,
+	.panel-body,
+	.list-group-root {
+		padding: $sidebar-menu-padding-x;
+	}
+
+	.sidebar-header,
+	.panel-header {
+		background-color: var(--sidebar) !important;
+		border-bottom: 1px solid var(--sidebar-border) !important;
+		min-height: 3rem;
+		padding: 0.75rem $sidebar-menu-padding-x;
+	}
+
+	.company-details,
+	.site-name,
+	.user-name {
+		color: var(--sidebar-foreground) !important;
+		font-size: 0.875rem;
+		font-weight: 600;
+	}
+
+	/* Group labels (SidebarGroupLabel) */
+	.panel-title,
+	.list-group-heading:not(.navigation-link),
+	.panel-header .panel-title {
+		@include sidebar-group-label;
+	}
+
+	.panel-title > .panel-toggler,
+	.panel-title > .collapse-icon {
+		@include sidebar-menu-button;
+		font-weight: 500;
+		padding-left: $sidebar-menu-padding-x;
+		padding-right: $sidebar-menu-padding-x;
+	}
+
+	/* Menu items (SidebarMenuButton) */
+	a,
+	button,
+	.navigation-link,
+	.list-group-item,
+	.list-group-item-action,
+	.nav-link,
+	.treeview-item a,
+	button.list-group-heading.navigation-link {
+		@include sidebar-menu-button;
+		color: var(--sidebar-foreground) !important;
+	}
+
+	.nav-equal-height > .active,
+	.nav-equal-height .nav > .active {
+		border-left: 0 !important;
+		margin-left: 0 !important;
+		padding-left: 0 !important;
+	}
+
+	.nav-link.active,
+	.list-group-heading.active,
+	.nav-equal-height > .active > a,
+	.nav-equal-height .nav > .active > a,
+	.tree-node-selected .tree-label,
+	.tree-node-selected > .tree-node-content {
+		@include sidebar-menu-button-active;
+	}
+
+	.tree-node-content {
+		padding-left: 0.25rem;
+	}
+
+	.pages-tree .tree-node-selected {
+		font-weight: 500;
+	}
+
+	/* Nested sub-menu (SidebarMenuSub) */
+	.nav-equal-height .nav .nav-link,
+	.treeview-group .treeview-item a {
+		font-size: 0.8125rem;
+		min-height: 1.75rem;
+		padding-left: 1.5rem;
+	}
+
+	.list-group {
+		gap: $sidebar-menu-gap;
+		margin-bottom: 0;
+	}
+
+	.list-group-item {
+		background: transparent !important;
+		border: 0 !important;
+		margin: 0;
+		padding: 0;
+	}
+
+	.panel-group {
+		gap: $sidebar-menu-gap;
+	}
+
+	.panel-secondary {
+		background: transparent;
+		border: 0;
+	}
+
+	.panel-collapse .panel-body {
+		padding-top: 0;
+	}
+
+	.form-control,
+	.form-control-sm,
+	select.form-control-sm {
+		background-color: var(--sidebar-accent) !important;
+		border: 1px solid var(--sidebar-border) !important;
+		border-radius: calc(var(--radius) - 2px);
+		color: var(--sidebar-foreground) !important;
+		font-size: 0.875rem;
+		min-height: $sidebar-menu-button-height;
+	}
+
+	.dropdown-menu {
+		background-color: var(--popover) !important;
+		border: 1px solid var(--border) !important;
+		border-radius: var(--radius);
+		box-shadow: 0 4px 12px color-mix(in oklch, var(--foreground) 12%, transparent);
+
+		a,
+		.dropdown-item {
+			@include sidebar-menu-button;
+			color: var(--popover-foreground) !important;
+			min-height: 1.75rem;
+		}
+	}
+
+	.loading-animation {
+		color: var(--sidebar-foreground) !important;
+	}
+
+	&:not(.light) a,
+	&:not(.light) button.list-group-heading.navigation-link {
+		color: var(--sidebar-foreground) !important;
+	}
+}

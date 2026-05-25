@@ -1,0 +1,6 @@
+Bundle-Name: My Portal Theme Contributor (shadcn v4)
+Bundle-SymbolicName: com.myportal.theme.contributor
+Bundle-Version: 1.0.0
+Liferay-Theme-Contributor-Type: my-portal
+Liferay-Theme-Contributor-Weight: 200
+Web-ContextPath: /my-portal-theme-contributor

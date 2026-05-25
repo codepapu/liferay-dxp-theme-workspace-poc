@@ -1,0 +1,254 @@
+:root {
+  --dda-bg: #f3f4f6;
+  --dda-card-bg: #ffffff;
+  --dda-card-border: #e5e7eb;
+  --dda-radius: 12px;
+  --dda-title: #0f172a;
+  --dda-muted: #6b7280;
+  --dda-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --dda-primary: #0055a4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: var(--dda-bg);
+  color: var(--dda-title);
+}
+
+.dda-shell {
+  min-height: 100vh;
+  padding: 28px 24px 40px;
+}
+
+.dda-shell--figma-dashboard {
+  padding-top: 32px;
+}
+
+.dda-shell__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.dda-page-title {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0f2744;
+}
+
+.dda-page-sub {
+  margin: 0 0 22px;
+  font-size: 14px;
+  color: var(--dda-muted);
+}
+
+.dda-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  align-items: flex-end;
+  margin-bottom: 22px;
+}
+
+.dda-kpis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.dda-kpi {
+  flex: 1 1 160px;
+  min-width: 140px;
+  background: var(--dda-card-bg);
+  border: 1px solid var(--dda-card-border);
+  border-radius: var(--dda-radius);
+  padding: 14px 16px;
+  box-shadow: var(--dda-shadow);
+}
+
+.dda-kpi__label {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--dda-muted);
+}
+
+.dda-kpi__value {
+  margin: 0 0 4px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f2744;
+}
+
+.dda-kpi__delta {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dda-kpi__delta--positive {
+  color: #15803d;
+}
+
+.dda-kpi__delta--negative {
+  color: #b91c1c;
+}
+
+.dda-kpi__delta--neutral {
+  color: #6b7280;
+}
+
+.dda-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.dda-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dda-field label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #9ca3af;
+}
+
+.dda-field select {
+  min-width: 160px;
+  border-radius: 8px;
+  border: 1px solid var(--dda-card-border);
+  padding: 8px 10px;
+  font-size: 13px;
+  font-family: inherit;
+  background: #fff;
+  color: #111827;
+}
+
+.dda-insight-banner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 22px;
+  margin-bottom: 64px;
+  border-radius: var(--dda-radius);
+  background: var(--dda-primary);
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 85, 164, 0.22);
+}
+
+.dda-insight-banner__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: #ffffff;
+  opacity: 0.95;
+}
+
+.dda-insight-banner__text {
+  flex: 1;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.dda-insight-banner__cta {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.dda-insight-banner__cta:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateX(2px);
+}
+
+.dda-dash-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 32px;
+  row-gap: 48px;
+}
+
+@media (max-width: 1080px) {
+  .dda-dash-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dda-card {
+  background: var(--dda-card-bg);
+  border: 1px solid var(--dda-card-border);
+  border-radius: var(--dda-radius);
+  padding: 20px;
+  box-shadow: var(--dda-shadow);
+}
+
+.dda-card__head {
+  padding-bottom: 14px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--dda-card-border);
+}
+
+.dda-card__title {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--dda-title);
+}
+
+.dda-card__sub {
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--dda-muted);
+}
+
+.dda-chart-root {
+  width: 100%;
+  min-height: 300px;
+}
+
+.dda-skeleton {
+  min-height: 300px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #f3f4f6 0%, #eceff2 50%, #f3f4f6 100%);
+  background-size: 200% 100%;
+  animation: dda-shimmer 1.1s ease-in-out infinite;
+}
+
+@keyframes dda-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

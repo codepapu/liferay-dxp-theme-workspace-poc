@@ -1,0 +1,113 @@
+{
+  "success": true,
+  "data": [
+    {
+      "productId": "energy",
+      "productName": "Energy Consumption Analytics",
+      "color": "#9EC9E8",
+      "quarter": "Q1",
+      "segment1": 1.0,
+      "segment2": 0.92,
+      "segment3": 0.98
+    },
+    {
+      "productId": "energy",
+      "productName": "Energy Consumption Analytics",
+      "color": "#9EC9E8",
+      "quarter": "Q2",
+      "segment1": 1.05,
+      "segment2": 1.0,
+      "segment3": 1.08
+    },
+    {
+      "productId": "energy",
+      "productName": "Energy Consumption Analytics",
+      "color": "#9EC9E8",
+      "quarter": "Q3",
+      "segment1": 1.12,
+      "segment2": 1.06,
+      "segment3": 1.14
+    },
+    {
+      "productId": "energy",
+      "productName": "Energy Consumption Analytics",
+      "color": "#9EC9E8",
+      "quarter": "Q4",
+      "segment1": 1.18,
+      "segment2": 1.1,
+      "segment3": 1.2
+    },
+    {
+      "productId": "smart",
+      "productName": "Smart City Sensor Data",
+      "color": "#0055A4",
+      "quarter": "Q1",
+      "segment1": 1.52,
+      "segment2": 1.48,
+      "segment3": 1.55
+    },
+    {
+      "productId": "smart",
+      "productName": "Smart City Sensor Data",
+      "color": "#0055A4",
+      "quarter": "Q2",
+      "segment1": 1.58,
+      "segment2": 1.52,
+      "segment3": 1.6
+    },
+    {
+      "productId": "smart",
+      "productName": "Smart City Sensor Data",
+      "color": "#0055A4",
+      "quarter": "Q3",
+      "segment1": 1.62,
+      "segment2": 1.58,
+      "segment3": 1.65
+    },
+    {
+      "productId": "smart",
+      "productName": "Smart City Sensor Data",
+      "color": "#0055A4",
+      "quarter": "Q4",
+      "segment1": 1.68,
+      "segment2": 1.62,
+      "segment3": 1.72
+    },
+    {
+      "productId": "public",
+      "productName": "Public Safety Reports",
+      "color": "#22C55E",
+      "quarter": "Q1",
+      "segment1": 0.88,
+      "segment2": 0.82,
+      "segment3": 0.9
+    },
+    {
+      "productId": "public",
+      "productName": "Public Safety Reports",
+      "color": "#22C55E",
+      "quarter": "Q2",
+      "segment1": 0.92,
+      "segment2": 0.88,
+      "segment3": 0.95
+    },
+    {
+      "productId": "public",
+      "productName": "Public Safety Reports",
+      "color": "#22C55E",
+      "quarter": "Q3",
+      "segment1": 0.98,
+      "segment2": 0.92,
+      "segment3": 1.0
+    },
+    {
+      "productId": "public",
+      "productName": "Public Safety Reports",
+      "color": "#22C55E",
+      "quarter": "Q4",
+      "segment1": 1.02,
+      "segment2": 0.98,
+      "segment3": 1.05
+    }
+  ]
+}

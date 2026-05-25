@@ -1,0 +1,6 @@
+##
+## Copy to gradle-local.properties and adjust for your machine.
+## gradle-local.properties is gitignored.
+##
+liferay.workspace.home.dir=../liferay-dxp
+liferay.workspace.target.platform.version=2026.q1.0

@@ -1,0 +1,85 @@
+@import 'shadcn_tokens';
+
+/* inject:imports */
+/* endinject */
+
+#wrapper {
+	background-color: var(--background);
+	color: var(--foreground);
+}
+
+.portlet-content,
+.portlet-body {
+	color: var(--foreground);
+}
+
+.portlet-decorate .portlet-content {
+	background-color: var(--card);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+}
+
+.portlet-header {
+	border-bottom-color: var(--border);
+}
+
+.form-control,
+.custom-select {
+	background-color: var(--background);
+	border-color: var(--input);
+	color: var(--foreground);
+
+	&:focus {
+		border-color: var(--ring);
+		box-shadow: 0 0 0 2px var(--ring);
+	}
+}
+
+.btn-primary {
+	background-color: var(--primary);
+	border-color: var(--primary);
+	color: var(--primary-foreground);
+}
+
+.btn-secondary {
+	background-color: var(--secondary);
+	border-color: var(--border);
+	color: var(--secondary-foreground);
+}
+
+.table {
+	color: var(--foreground);
+
+	td,
+	th {
+		border-color: var(--border);
+	}
+}
+
+.dropdown-menu {
+	background-color: var(--popover);
+	border-color: var(--border);
+	color: var(--popover-foreground);
+}
+
+.dropdown-item {
+	color: var(--foreground);
+
+	&:hover,
+	&:focus {
+		background-color: var(--accent);
+		color: var(--accent-foreground);
+	}
+}
+
+.modal-content {
+	background-color: var(--card);
+	border-color: var(--border);
+	color: var(--card-foreground);
+}
+
+.list-group-item {
+	background-color: var(--card);
+	border-color: var(--border);
+	color: var(--card-foreground);
+}

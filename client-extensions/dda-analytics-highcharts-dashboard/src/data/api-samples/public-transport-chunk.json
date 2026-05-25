@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "data": [
+    { "TransportType": "Metro", "Rides": 620 },
+    { "TransportType": "Public Transport Buses", "Rides": 410 },
+    { "TransportType": "Shared Mobility", "Rides": 180 },
+    { "TransportType": "Marine", "Rides": 95 },
+    { "TransportType": "Tram", "Rides": 42 }
+  ]
+}

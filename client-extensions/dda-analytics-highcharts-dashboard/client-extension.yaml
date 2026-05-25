@@ -1,0 +1,21 @@
+assemble:
+  - from: build/vite
+    into: static
+
+dda-analytics-highcharts-dashboard:
+  cssURLs:
+    - "assets/*.css"
+  friendlyURLMapping: dda-analytics-highcharts-dashboard
+  htmlElementName: dda-analytics-highcharts-dashboard
+  instanceable: true
+  name: DDA Analytics Highcharts Dashboard
+  portletCategoryName: category.client-extensions
+  properties:
+    # Same value as Liferay System Settings → Common Configuration → high-chart-license
+    # (com.dda.common.configuration.CommonConfiguration#getHighChartLicense)
+    highChartLicense: ""
+    analyticsApiBaseUrl: ""
+  type: customElement
+  urls:
+    - "*.js"
+  useESM: true

@@ -1,0 +1,38 @@
+@import 'shadcn_tokens';
+
+// Map shadcn v4 tokens into Clay Bootstrap variables
+$body-bg: var(--background) !default;
+$body-color: var(--foreground) !default;
+$link-color: var(--primary) !default;
+$link-hover-color: var(--primary) !default;
+
+$primary: var(--primary) !default;
+$secondary: var(--secondary) !default;
+$light: var(--muted) !default;
+$dark: var(--foreground) !default;
+
+$border-color: var(--border) !default;
+$input-border-color: var(--input) !default;
+$input-bg: var(--background) !default;
+$input-color: var(--foreground) !default;
+
+$btn-primary-bg: var(--primary) !default;
+$btn-primary-color: var(--primary-foreground) !default;
+$btn-primary-border: var(--primary) !default;
+
+$btn-secondary-bg: var(--secondary) !default;
+$btn-secondary-color: var(--secondary-foreground) !default;
+$btn-secondary-border: var(--border) !default;
+
+$card-bg: var(--card) !default;
+$card-border-color: var(--border) !default;
+$card-cap-bg: var(--card) !default;
+
+$navbar-light-color: var(--foreground) !default;
+$navbar-light-hover-color: var(--primary) !default;
+$navbar-light-active-color: var(--primary) !default;
+$navbar-light-disabled-color: var(--muted-foreground) !default;
+
+$border-radius: var(--radius) !default;
+$border-radius-lg: var(--radius) !default;
+$border-radius-sm: calc(var(--radius) * 0.6) !default;

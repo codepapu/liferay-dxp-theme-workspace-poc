@@ -1,0 +1,16 @@
+$product-menu-width: 280px;
+
+html .cadmin .product-menu,
+html .product-menu {
+	background-color: var(--sidebar) !important;
+	color: var(--sidebar-foreground) !important;
+}
+
+html .cadmin .product-menu a,
+html .cadmin .product-menu button,
+html .cadmin .product-menu .category-name,
+html .cadmin .product-menu .site-name,
+html .product-menu a,
+html .product-menu .category-name {
+	color: var(--sidebar-foreground) !important;
+}

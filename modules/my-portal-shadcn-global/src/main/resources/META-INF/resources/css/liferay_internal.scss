@@ -1,0 +1,191 @@
+// Production shadcn v4 overrides — Liferay Control Panel & internal pages (loads last)
+
+/* ---------- Shell ---------- */
+html .cadmin,
+html .cadmin #wrapper,
+html .cadmin .portlet-layout,
+html .cadmin .portlet-content,
+html .cadmin .portlet-body {
+	background-color: var(--background) !important;
+	color: var(--foreground) !important;
+}
+
+html .cadmin h1,
+html .cadmin h2,
+html .cadmin h3,
+html .cadmin h4,
+html .cadmin h5,
+html .cadmin h6,
+html .cadmin p,
+html .cadmin label,
+html .cadmin .text-secondary {
+	color: var(--foreground) !important;
+}
+
+html .cadmin .text-muted,
+html .cadmin .text-muted-hover {
+	color: var(--muted-foreground) !important;
+}
+
+/* ---------- Control menu (top bar) ---------- */
+html .cadmin .control-menu-container,
+html .cadmin .control-menu {
+	background-color: var(--card) !important;
+	border-bottom: 1px solid var(--border) !important;
+	color: var(--card-foreground) !important;
+}
+
+html .cadmin .control-menu-nav a,
+html .cadmin .control-menu-nav button,
+html .cadmin .control-menu-nav .btn {
+	color: var(--foreground) !important;
+}
+
+/* ---------- Tabs / horizontal nav (shadcn NavigationMenu style) ---------- */
+html .cadmin .nav-tabs,
+html .cadmin .navigation-bar,
+html .cadmin .navbar-nav {
+	border-color: var(--border) !important;
+	gap: 0.25rem;
+}
+
+html .cadmin .nav-tabs .nav-link,
+html .cadmin .navigation-bar .nav-link,
+html .cadmin .navbar-nav .nav-link {
+	background-color: transparent !important;
+	border-color: transparent !important;
+	border-radius: calc(var(--radius) - 2px);
+	color: var(--muted-foreground) !important;
+	font-size: 0.875rem;
+	font-weight: 500;
+	padding: 0.375rem 0.75rem;
+}
+
+html .cadmin .nav-tabs .nav-link.active,
+html .cadmin .nav-tabs .nav-link.active:hover,
+html .cadmin .navigation-bar .nav-link.active,
+html .cadmin .navbar-nav .active > .nav-link {
+	background-color: var(--accent) !important;
+	border-color: transparent !important;
+	color: var(--accent-foreground) !important;
+}
+
+html .cadmin .nav-tabs .nav-link:hover,
+html .cadmin .navigation-bar .nav-link:hover,
+html .cadmin .navbar-nav .nav-link:hover {
+	background-color: var(--accent) !important;
+	color: var(--accent-foreground) !important;
+}
+
+/* ---------- Management toolbar / search ---------- */
+html .cadmin .management-bar,
+html .cadmin .navbar-collapse,
+html .cadmin .subnav-tbar,
+html .cadmin .tbar {
+	background-color: var(--card) !important;
+	border-color: var(--border) !important;
+	color: var(--card-foreground) !important;
+}
+
+html .cadmin .form-control,
+html .cadmin .custom-select,
+html .cadmin input[type='text'],
+html .cadmin input[type='search'],
+html .cadmin textarea,
+html .cadmin select {
+	background-color: var(--background) !important;
+	border-color: var(--input) !important;
+	color: var(--foreground) !important;
+}
+
+html .cadmin .form-control:focus,
+html .cadmin input:focus,
+html .cadmin select:focus,
+html .cadmin textarea:focus {
+	border-color: var(--ring) !important;
+	box-shadow: 0 0 0 2px color-mix(in oklch, var(--ring) 35%, transparent) !important;
+}
+
+/* ---------- Buttons ---------- */
+html .cadmin .btn-primary {
+	background-color: var(--primary) !important;
+	border-color: var(--primary) !important;
+	color: var(--primary-foreground) !important;
+}
+
+html .cadmin .btn-secondary,
+html .cadmin .btn-default,
+html .cadmin .btn-light {
+	background-color: var(--secondary) !important;
+	border-color: var(--border) !important;
+	color: var(--secondary-foreground) !important;
+}
+
+html .cadmin .btn-link {
+	color: var(--primary) !important;
+}
+
+/* ---------- Cards / panels / empty state ---------- */
+html .cadmin .card,
+html .cadmin .panel,
+html .cadmin .sheet,
+html .cadmin .sheet-lg,
+html .cadmin .taglib-empty-result-message {
+	background-color: var(--card) !important;
+	border-color: var(--border) !important;
+	color: var(--card-foreground) !important;
+}
+
+html .cadmin .taglib-empty-result-message .text-center,
+html .cadmin .taglib-empty-result-message .taglib-text {
+	color: var(--muted-foreground) !important;
+}
+
+/* ---------- Tables ---------- */
+html .cadmin .table {
+	background-color: var(--card) !important;
+	color: var(--foreground) !important;
+}
+
+html .cadmin .table td,
+html .cadmin .table th {
+	border-color: var(--border) !important;
+	color: var(--foreground) !important;
+}
+
+html .cadmin .table-hover tbody tr:hover {
+	background-color: var(--accent) !important;
+	color: var(--accent-foreground) !important;
+}
+
+/* ---------- Dropdowns / popovers ---------- */
+html .cadmin .dropdown-menu {
+	background-color: var(--popover) !important;
+	border-color: var(--border) !important;
+	color: var(--popover-foreground) !important;
+}
+
+html .cadmin .dropdown-item {
+	color: var(--foreground) !important;
+}
+
+html .cadmin .dropdown-item:hover,
+html .cadmin .dropdown-item:focus,
+html .cadmin .dropdown-item.active {
+	background-color: var(--accent) !important;
+	color: var(--accent-foreground) !important;
+}
+
+/* ---------- Modals ---------- */
+html .cadmin .modal-content {
+	background-color: var(--card) !important;
+	border-color: var(--border) !important;
+	color: var(--card-foreground) !important;
+}
+
+/* ---------- Sidebar panels inside content (not product menu) ---------- */
+html .cadmin .sidebar,
+html .cadmin .sidebar-body {
+	background-color: var(--card) !important;
+	color: var(--card-foreground) !important;
+}

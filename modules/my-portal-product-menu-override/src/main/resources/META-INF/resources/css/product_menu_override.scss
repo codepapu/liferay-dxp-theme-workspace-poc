@@ -1,0 +1,127 @@
+// shadcn v4 product menu — final override (service.ranking=26000)
+
+$product-menu-width: 280px;
+
+/* Panel shell */
+html .cadmin.lfr-product-menu-panel.sidenav-menu-slider {
+	z-index: 990 !important;
+
+	&.open .sidenav-menu,
+	.sidenav-menu,
+	.product-menu {
+		background-color: var(--sidebar) !important;
+		border-right: 1px solid var(--sidebar-border) !important;
+		color: var(--sidebar-foreground) !important;
+		width: $product-menu-width !important;
+	}
+}
+
+html body.product-menu-open #wrapper,
+html body.product-menu-open .cadmin.control-menu-container {
+	@media (min-width: 992px) {
+		padding-left: $product-menu-width !important;
+	}
+}
+
+/* All readable text in side navigation */
+html .cadmin .product-menu,
+html .cadmin .product-menu .sidenav-menu,
+html .cadmin .lfr-product-menu-panel .product-menu {
+	background-color: var(--sidebar) !important;
+	color: var(--sidebar-foreground) !important;
+
+	* {
+		border-color: var(--sidebar-border);
+	}
+
+	a,
+	button,
+	span,
+	label,
+	.panel-title,
+	.panel-toggler,
+	.category-name,
+	.site-name,
+	.user-name,
+	.company-details,
+	.navigation-link,
+	.list-group-heading,
+	.tree-label,
+	.tree-node-content,
+	.sidebar-header {
+		color: var(--sidebar-foreground) !important;
+	}
+
+	.sidebar-header,
+	.panel-header {
+		background-color: var(--sidebar) !important;
+		border-bottom: 1px solid var(--sidebar-border) !important;
+	}
+
+	.panel-body,
+	.sidebar-body {
+		background-color: var(--sidebar) !important;
+	}
+
+	.list-group-item,
+	.list-group-item-action,
+	.nav-link,
+	.treeview-item a {
+		background-color: transparent !important;
+		color: var(--sidebar-foreground) !important;
+	}
+
+	.list-group-item-action:hover,
+	.list-group-item-action:focus,
+	.nav-link:hover,
+	.nav-link:focus,
+	.treeview-item a:hover,
+	button.list-group-heading.navigation-link:hover {
+		background-color: var(--sidebar-accent) !important;
+		color: var(--sidebar-accent-foreground) !important;
+	}
+
+	.nav-link.active,
+	.list-group-heading.active,
+	.nav-equal-height > .active,
+	.nav-equal-height .nav > .active,
+	.tree-node-selected .tree-label {
+		background-color: var(--sidebar-primary) !important;
+		border-left-color: var(--sidebar-primary) !important;
+		color: var(--sidebar-primary-foreground) !important;
+		font-weight: 600;
+	}
+
+	.form-control,
+	.form-control-sm,
+	select.form-control-sm {
+		background-color: var(--sidebar-accent) !important;
+		border: 1px solid var(--sidebar-border) !important;
+		color: var(--sidebar-foreground) !important;
+	}
+
+	.form-control::placeholder,
+	.form-control-sm::placeholder {
+		color: var(--muted-foreground) !important;
+	}
+
+	.dropdown-menu {
+		background-color: var(--popover) !important;
+		border-color: var(--border) !important;
+
+		a,
+		.dropdown-item {
+			color: var(--popover-foreground) !important;
+		}
+	}
+
+	.loading-animation {
+		color: var(--sidebar-foreground) !important;
+	}
+
+	/* Liferay dark-menu defaults */
+	&:not(.light) a,
+	&:not(.light) button.list-group-heading.navigation-link {
+		color: var(--sidebar-foreground) !important;
+	}
+}

@@ -1,0 +1,79 @@
+DDA Analytics Highcharts Dashboard — API-shaped dummy JSON
+===========================================================
+
+All samples use the same envelope as `dda-dataset-analysis-chart` chunk responses:
+
+  { "success": true, "data": ... }
+
+For tabular chart feeds, `data` is an **array of row objects** (same idea as
+`chunkChartData.data` in `modules/dda-dataset-analysis-chart/.../js/main.js` after
+`getNextChunk()`). Column names are fixed contracts your REST layer should return.
+
+Authoritative copies for handoff / static hosting live in:
+
+  modules/dda-dataset-analysis-chart/src/main/resources/META-INF/resources/analytics-dashboard-sample/
+
+The client extension bundles **identical** files from:
+
+  client-extensions/dda-analytics-highcharts-dashboard/src/data/api-samples/
+
+Files (API response each):
+  - meta-response.json          — data: { title, subtitle }
+  - kpis-response.json         — data: [ { id, label, value, deltaLabel, delta, tone }, ... ]
+  - filters-response.json      — data: { period: {...}, region: {...} }
+  - passenger-airport-chunk.json — data: [ { Year, Passengers }, ... ]
+  - public-transport-chunk.json  — data: [ { TransportType, Rides }, ... ]
+  - revenue-by-product-chunk.json — data: [ { productId, productName, color, quarter, segment1, segment2, segment3 }, ... ]
+  - engagement-chunk.json      — data: [ { Month, StorefrontViews, Purchases }, ... ]
+  - dataset-analysis-chunk-sample.json — same shape as passenger-airport-chunk (portlet tabular example)
+
+The React app maps these payloads to chart props in:
+
+  client-extensions/dda-analytics-highcharts-dashboard/src/model/buildDashboardFixture.ts
+
+(Replace that mapping with real `fetch()` once APIs exist; UI components stay unchanged.)
+
+Units (unchanged in UI):
+  - Passenger `Passengers`: millions (axis "M").
+  - Public transport `Rides`: same scale as before (tooltip "M rides").
+  - Revenue segments: thousands (axis "K").
+  - Engagement metrics: thousands (axis "K").
+
+KPI tones: "positive" | "negative" | "neutral"
+
+--- meta-response.json ---
+
+BEGIN
+{
+  "success": true,
+  "data": {
+    "title": "Analytics overview",
+    "subtitle": "Static preview dataset — replace with API responses"
+  }
+}
+END
+
+--- passenger-airport-chunk.json (tabular `data`; same core rows as dataset portlet sample) ---
+
+BEGIN
+{
+  "success": true,
+  "data": [
+    { "Year": "2014", "Passengers": 56.4 },
+    { "Year": "2015", "Passengers": 61.4 },
+    { "Year": "2016", "Passengers": 66.4 },
+    { "Year": "2017", "Passengers": 71.0 },
+    { "Year": "2018", "Passengers": 75.5 },
+    { "Year": "2019", "Passengers": 89.1 },
+    { "Year": "2020", "Passengers": 39.9 },
+    { "Year": "2021", "Passengers": 29.1 },
+    { "Year": "2022", "Passengers": 66.1 },
+    { "Year": "2023", "Passengers": 77.3 },
+    { "Year": "2024", "Passengers": 84.5 }
+  ]
+}
+END
+
+(Full contents of kpis-response, filters-response, public-transport-chunk,
+revenue-by-product-chunk, and engagement-chunk are in the files listed above —
+copy from those JSON files to avoid drift.)

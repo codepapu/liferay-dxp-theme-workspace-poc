@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": "total-passengers",
+      "label": "Air passengers (2024)",
+      "value": "84.5M",
+      "deltaLabel": "vs 2019",
+      "delta": "-6.1%",
+      "tone": "neutral"
+    },
+    {
+      "id": "transit-rides",
+      "label": "Public transport rides (2023)",
+      "value": "702M",
+      "deltaLabel": "YoY",
+      "delta": "+8.2%",
+      "tone": "positive"
+    },
+    {
+      "id": "revenue-index",
+      "label": "Revenue index (Q4)",
+      "value": "14.2K",
+      "deltaLabel": "QoQ",
+      "delta": "+3.4%",
+      "tone": "positive"
+    }
+  ]
+}

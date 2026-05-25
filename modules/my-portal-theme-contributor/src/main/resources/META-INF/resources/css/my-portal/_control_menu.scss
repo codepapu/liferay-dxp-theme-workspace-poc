@@ -1,0 +1,12 @@
+html .cadmin .control-menu-container,
+html .cadmin .control-menu,
+html .control-menu {
+	background-color: var(--card) !important;
+	border-bottom: 1px solid var(--border) !important;
+	color: var(--card-foreground) !important;
+}
+
+html .cadmin .control-menu-nav a,
+html .cadmin .control-menu-nav button {
+	color: var(--foreground) !important;
+}

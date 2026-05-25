@@ -1,0 +1,4 @@
+Bundle-Name: My Portal shadcn v4 Global
+Bundle-SymbolicName: com.myportal.shadcn.global
+Bundle-Version: 1.0.0
+Web-ContextPath: /my-portal-shadcn-global
